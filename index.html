@@ -1,0 +1,226 @@
+<!doctype html>
+<!--
+  Sigillum download page. Copied to the public sigillum-releases repo by release.yml and served
+  by GitHub Pages. Links use releases/latest/download/…, so they always point at the newest version.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sigillum</title>
+  <meta name="description" content="Sigillum: client records and documents, encrypted on your own PC.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%236B4423'/%3E%3Ctext x='16' y='22' font-size='17' text-anchor='middle' fill='white' font-family='Georgia,serif'%3ES%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --primary: #6B4423;
+      --text: #3E2A1E;
+      --accent: #A47551;
+      --bg: #FFFFFF;
+      --surface: #FAF7F4;
+      --border: #E8DFD6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 "Segoe UI", system-ui, -apple-system, "Inter", sans-serif;
+    }
+    header { background: var(--primary); color: #fff; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+    header .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .brand { font-size: 20px; font-weight: 600; letter-spacing: .2px; }
+    .lang button {
+      background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.6);
+      border-radius: 6px; padding: 4px 10px; font: inherit; font-size: 14px; cursor: pointer;
+    }
+    .lang button[aria-pressed="true"] { background: rgba(255,255,255,.18); }
+    main { padding: 48px 0 64px; }
+    h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+    .lead { font-size: 18px; margin: 0 0 32px; }
+    .card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+      padding: 28px; margin-bottom: 24px;
+    }
+    .downloads { display: grid; gap: 12px; }
+    .download {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      padding: 16px 20px; border-radius: 8px; text-decoration: none;
+      border: 1px solid var(--primary); color: var(--primary); background: var(--bg);
+    }
+    .download:hover { background: var(--surface); }
+    .download.recommended { background: var(--primary); color: #fff; }
+    .download.recommended:hover { background: #5a391d; }
+    .download strong { display: block; font-size: 17px; }
+    .download small { opacity: .85; }
+    .download .arrow { font-size: 22px; flex: none; }
+    .version { margin: 16px 0 0; font-size: 14px; opacity: .8; }
+    h2 { font-size: 18px; margin: 0 0 12px; }
+    ul { margin: 0; padding-left: 20px; }
+    li { margin: 6px 0; }
+    .note { border-left: 3px solid var(--accent); padding-left: 16px; }
+    a { color: var(--primary); }
+    footer { border-top: 1px solid var(--border); padding: 24px 0; font-size: 14px; opacity: .8; }
+    [data-lang] { display: none; }
+    html[lang="en"] [data-lang="en"], html[lang="pt"] [data-lang="pt"] { display: revert; }
+    @media (max-width: 520px) {
+      h1 { font-size: 28px; }
+      .card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <span class="brand">Sigillum</span>
+      <span class="lang">
+        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-set-lang="pt" aria-pressed="false">PT</button>
+      </span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>
+      <span data-lang="en">Client records and documents, encrypted on your PC</span>
+      <span data-lang="pt">Fichas e documentos de clientes, encriptados no seu PC</span>
+    </h1>
+    <p class="lead">
+      <span data-lang="en">Keep clients, notes, deadlines and their documents in one place. Everything is encrypted with your password, backed up to the folders you choose, and never leaves your PC.</span>
+      <span data-lang="pt">Guarde clientes, notas, prazos e os respetivos documentos num só lugar. Tudo é encriptado com a sua palavra-passe, copiado para as pastas que escolher e nunca sai do seu PC.</span>
+    </p>
+
+    <section class="card">
+      <h2>
+        <span data-lang="en">Download for Windows</span>
+        <span data-lang="pt">Transferir para Windows</span>
+      </h2>
+      <div class="downloads">
+        <a class="download" id="dl-x64"
+           href="https://github.com/IronFire15/sigillum-releases/releases/latest/download/SigillumApp-win-Setup.exe">
+          <span>
+            <strong>
+              <span data-lang="en">Windows (most PCs)</span>
+              <span data-lang="pt">Windows (a maioria dos PCs)</span>
+            </strong>
+            <small>
+              <span data-lang="en">Intel or AMD processor · Windows 10 or 11, 64-bit</span>
+              <span data-lang="pt">Processador Intel ou AMD · Windows 10 ou 11, 64 bits</span>
+            </small>
+          </span>
+          <span class="arrow" aria-hidden="true">↓</span>
+        </a>
+        <a class="download" id="dl-arm64"
+           href="https://github.com/IronFire15/sigillum-releases/releases/latest/download/SigillumApp-win-arm64-Setup.exe">
+          <span>
+            <strong>
+              <span data-lang="en">Windows on ARM</span>
+              <span data-lang="pt">Windows em ARM</span>
+            </strong>
+            <small>
+              <span data-lang="en">Snapdragon processor, e.g. Surface Pro or Copilot+ PCs</span>
+              <span data-lang="pt">Processador Snapdragon, p. ex. Surface Pro ou PCs Copilot+</span>
+            </small>
+          </span>
+          <span class="arrow" aria-hidden="true">↓</span>
+        </a>
+      </div>
+      <p class="version" id="version" hidden></p>
+    </section>
+
+    <section class="card">
+      <h2>
+        <span data-lang="en">Installing</span>
+        <span data-lang="pt">Instalar</span>
+      </h2>
+      <ul>
+        <li>
+          <span data-lang="en">Run the downloaded file. Sigillum installs for your Windows user only, so no administrator password is needed.</span>
+          <span data-lang="pt">Execute o ficheiro transferido. O Sigillum é instalado só para o seu utilizador do Windows, por isso não precisa de palavra-passe de administrador.</span>
+        </li>
+        <li class="note">
+          <span data-lang="en">If Windows shows “Windows protected your PC”, click <b>More info</b>, then <b>Run anyway</b>. This appears because the installer isn't code-signed yet.</span>
+          <span data-lang="pt">Se o Windows mostrar “O Windows protegeu o seu PC”, clique em <b>Mais informações</b> e depois em <b>Executar mesmo assim</b>. Aparece porque o instalador ainda não tem assinatura digital.</span>
+        </li>
+        <li>
+          <span data-lang="en">Moving from another PC? On first start, click “Moving from another PC? Restore from a backup”.</span>
+          <span data-lang="pt">Vem de outro PC? Na primeira utilização, clique em “Vem de outro PC? Restaurar a partir de uma cópia de segurança”.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>
+        <span data-lang="en">Updates</span>
+        <span data-lang="pt">Atualizações</span>
+      </h2>
+      <p style="margin:0">
+        <span data-lang="en">Sigillum updates itself: new versions download in the background and install when you restart or close it. Your clients and documents are kept. </span>
+        <span data-lang="pt">O Sigillum atualiza-se sozinho: as novas versões são transferidas em segundo plano e instaladas quando reinicia ou fecha a aplicação. Os seus clientes e documentos são mantidos. </span>
+        <a href="https://github.com/IronFire15/sigillum-releases/releases">
+          <span data-lang="en">What's new</span>
+          <span data-lang="pt">Novidades</span>
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span data-lang="en">Sigillum stores your data only on your PC and in the backup folders you choose.</span>
+      <span data-lang="pt">O Sigillum guarda os seus dados apenas no seu PC e nas pastas de cópias de segurança que escolher.</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+
+      function setLang(lang) {
+        root.lang = lang;
+        document.querySelectorAll('[data-set-lang]').forEach(function (b) {
+          b.setAttribute('aria-pressed', String(b.dataset.setLang === lang));
+        });
+        try { localStorage.setItem('lang', lang); } catch (e) {}
+        showVersion();
+      }
+
+      var saved = null;
+      try { saved = localStorage.getItem('lang'); } catch (e) {}
+      var browser = (navigator.language || 'en').toLowerCase().indexOf('pt') === 0 ? 'pt' : 'en';
+      document.querySelectorAll('[data-set-lang]').forEach(function (b) {
+        b.addEventListener('click', function () { setLang(b.dataset.setLang); });
+      });
+
+      // Highlight the right download: ARM when the browser says so (Chromium-based browsers only).
+      function recommend(arch) {
+        document.getElementById(arch === 'arm' ? 'dl-arm64' : 'dl-x64').classList.add('recommended');
+      }
+      if (navigator.userAgentData && navigator.userAgentData.getHighEntropyValues) {
+        navigator.userAgentData.getHighEntropyValues(['architecture'])
+          .then(function (v) { recommend(v.architecture); })
+          .catch(function () { recommend('x86'); });
+      } else {
+        recommend('x86');
+      }
+
+      // Latest version number, from the public releases repo.
+      var latest = null;
+      function showVersion() {
+        var el = document.getElementById('version');
+        if (!latest) return;
+        var date = new Date(latest.published_at).toLocaleDateString(root.lang === 'pt' ? 'pt-PT' : 'en-GB');
+        el.textContent = (root.lang === 'pt' ? 'Versão ' : 'Version ') + latest.tag_name.replace(/^v/, '') +
+          (root.lang === 'pt' ? ' · publicada a ' : ' · released ') + date;
+        el.hidden = false;
+      }
+      fetch('https://api.github.com/repos/IronFire15/sigillum-releases/releases/latest')
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (data) { if (data && data.tag_name) { latest = data; showVersion(); } })
+        .catch(function () {});
+
+      setLang(saved === 'en' || saved === 'pt' ? saved : browser);
+    })();
+  </script>
+</body>
+</html>
